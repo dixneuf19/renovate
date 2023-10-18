@@ -1,0 +1,32 @@
+[project]
+name = "rye"
+dynamic = ["version"]
+requires-python = ">=3.7"
+license = {text = "MIT"}
+dependencies = [
+  "blinker",
+  "packaging>=20.9,!=22.0",
+]
+readme = "README.md"
+
+[project.optional-dependencies]
+pytest = [
+  "pytest>12",
+]
+
+[tool.rye.dev-dependencies]
+test = [
+  "pytest-rerunfailures>=10.2",
+]
+tox = [
+  "tox-pdm>=0.5",
+]
+
+[[tool.rye.sources]]
+name = "internal"
+url = "https://private-site.org/pypi/simple"
+
+[[tool.rye.sources]]
+name = "pypi"
+url = "https://private.pypi.org/simple"
+type = "find-links"

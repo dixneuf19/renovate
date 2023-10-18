@@ -4,6 +4,8 @@ import { extractPackageFile } from '.';
 
 const pdmPyProject = Fixtures.get('pyproject_with_pdm.toml');
 const pdmSourcesPyProject = Fixtures.get('pyproject_pdm_sources.toml');
+const ryePyProject = Fixtures.get('pyproject_with_rye.toml');
+const ryeSourcesPyProject = Fixtures.get('pyproject_rye_sources.toml');
 
 describe('modules/manager/pep621/extract', () => {
   describe('extractPackageFile()', () => {

@@ -196,6 +196,11 @@ const allToolConfig: Record<string, ToolConfig> = {
     packageName: 'flutter',
     versioning: semverVersioningId,
   },
+  rye: {
+    datasource: 'github-releases',
+    packageName: 'mitsuhiko/rye',
+    versioning: semverVersioningId,
+  },
 };
 
 export function supportsDynamicInstall(toolName: string): boolean {

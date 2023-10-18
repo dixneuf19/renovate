@@ -46,6 +46,18 @@ export const PyProjectSchema = z.object({
             .optional(),
         })
         .optional(),
+        rye: z
+        .object({
+          'dev-dependencies': DependencyListSchema,
+          sources: z.array(
+            z.object({
+              name: z.string(),
+              url: z.string(),
+              type: z.enum(["index", "find-links"]).optional()
+            })
+          ).optional(),
+      })
+      .optional(),
     })
     .optional(),
 });
